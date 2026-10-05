@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>حبّة | محمصة قهوة مختصة</title>
+  <meta name="description" content="قهوة مختصة تُحمَّص على دفعات صغيرة، مع مؤقّت تحضير مجاني.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="#">حبّة</a>
+    <nav aria-label="القائمة الرئيسية">
+      <a href="#brew">المؤقّت</a>
+      <a href="#beans">البُن</a>
+      <a href="#visit">زورونا</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>تُحمَّص صباحًا، وتصلك قبل أن تبرد</h1>
+        <p>دفعات صغيرة من بُن مختار من مزارع محددة. اختر طريقتك وابدأ التحضير بالوقت الصحيح.</p>
+      </div>
+
+      <div class="timer" id="brew" aria-label="مؤقّت التحضير">
+        <div class="methods" role="group" aria-label="طريقة التحضير">
+          <button class="chip is-on" data-sec="180" aria-pressed="true">V60</button>
+          <button class="chip" data-sec="240" aria-pressed="false">فرنش برس</button>
+          <button class="chip" data-sec="30" aria-pressed="false">إسبريسو</button>
+        </div>
+        <output class="clock" id="clock" aria-live="off">03:00</output>
+        <div class="actions">
+          <button class="btn" id="start">ابدأ التحضير</button>
+          <button class="btn ghost" id="reset">إعادة</button>
+        </div>
+        <p class="status" id="status" role="status"></p>
+      </div>
+    </section>
+
+    <section class="beans" id="beans">
+      <h2>البُن هذا الأسبوع</h2>
+      <div class="filters" role="group" aria-label="درجة التحميص">
+        <button class="chip is-on" data-roast="all" aria-pressed="true">الكل</button>
+        <button class="chip" data-roast="light" aria-pressed="false">فاتح</button>
+        <button class="chip" data-roast="medium" aria-pressed="false">متوسط</button>
+        <button class="chip" data-roast="dark" aria-pressed="false">داكن</button>
+      </div>
+      <ul class="list" id="list">
+        <li data-roast="light"><div><h3>إثيوبيا يرغاتشيفي</h3><p>زهور وحمضيات وشاي أسود</p></div><span>58 ر.س</span></li>
+        <li data-roast="light"><div><h3>كينيا نيري</h3><p>توت أحمر وحموضة منعشة</p></div><span>64 ر.س</span></li>
+        <li data-roast="medium"><div><h3>كولومبيا هويلا</h3><p>كراميل وتفاح وقوام متوازن</p></div><span>52 ر.س</span></li>
+        <li data-roast="medium"><div><h3>البرازيل سيرادو</h3><p>مكسرات وشوكولاتة حليب</p></div><span>46 ر.س</span></li>
+        <li data-roast="dark"><div><h3>خلطة الصباح</h3><p>كاكاو داكن وقوام كثيف</p></div><span>42 ر.س</span></li>
+        <li data-roast="dark"><div><h3>سومطرة منديلنغ</h3><p>توابل وخشب وجسم ثقيل</p></div><span>55 ر.س</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="visit" id="visit">
+    <h2>زورونا</h2>
+    <p>من السبت إلى الخميس، 7 صباحًا – 10 مساءً</p>
+    <p>hello@example.com</p>
+    <small>© 2026 حبّة</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
